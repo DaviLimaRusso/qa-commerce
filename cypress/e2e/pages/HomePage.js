@@ -1,0 +1,36 @@
+import * as constants from '../pages/Constants'
+
+class HomePage {
+
+    // Valida se o produto está na Home
+    validateHomeProduct(product) {
+        cy.wait(1000)
+        cy.get('body').then(($body) => {
+
+            const foundProduct = $body.text().includes(product)
+
+            if (foundProduct) {
+                cy.log('Produto encontrado na Home')
+            } else {
+                throw new Error(`Produto não encontrado: ${product}`)
+            }
+        })
+    }
+
+    // Adiciona o produto ao carrinho
+    addProductToCart(product) {
+        cy.contains('.card-body', product)
+            .find('button.btn.btn-primary.add-to-cart')
+            .click()
+        cy.wait(constants.ONE_SEC_WAIT_TIME)
+    }
+
+    // Acessa página do carrinho
+    AccessCartPage() {
+        cy.get('a[href="/cart.html"]')
+            .contains('CARRINHO')
+            .click()
+    }
+}
+
+export default new HomePage;
