@@ -2,6 +2,12 @@ import * as constants from '../pages/Constants'
 
 class HomePage {
 
+    // Clica no "MINHA CONTA" para realizar login
+    accessLoginPage() {
+        cy.get('a[id="account-link"]')
+            .click()
+    }
+
     // Valida se o produto está na Home e salva o preço dele
     validateHomeProduct(product) {
         cy.wait(constants.ONE_SEC_WAIT_TIME)

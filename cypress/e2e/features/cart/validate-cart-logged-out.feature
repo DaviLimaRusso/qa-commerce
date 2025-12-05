@@ -4,7 +4,7 @@ Feature: Validação do carrinho deslogado
   Para validar que o produto foi adicionado corretamente e o preço exibido na Home é igual ao do carrinho
 
   Scenario: Validar o produto no carrinho estando deslogado
-    Given eu entro na página inicial
+    Given que eu entro na página inicial
     And o produto 'Moletom com capuz \"Se você acha que nada é impossível...\"' está listado na Home
     When adiciono o produto 'Moletom com capuz \"Se você acha que nada é impossível...\"' ao carrinho
     And acesso a página do carrinho

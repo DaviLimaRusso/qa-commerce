@@ -3,7 +3,7 @@ import homePage from '../pages/HomePage'
 import cartPage from '../pages/CartPage'
 import * as constants from '../pages/Constants'
 
-Given('eu entro na página inicial', function() {
+Given('que eu entro na página inicial', function() {
     cy.visit(constants.URL_SELLER)
 })
 

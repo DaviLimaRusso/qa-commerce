@@ -20,6 +20,13 @@ class CartPage {
                 })
         })
     }
+
+    // Acessa o Checkout para finalização do pedido
+    accessCheckoutPage() {
+        cy.get('a[href="/checkout.html"]')
+            .should('be.visible')
+            .click()
+    }
 }
 
 export default new CartPage;

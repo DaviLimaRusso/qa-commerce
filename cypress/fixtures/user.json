@@ -2,5 +2,15 @@
   "login": {
     "email": "admin@admin.com",
     "password": "admin"
+  },
+
+  "dataFreightCheckout": {
+    "firstName": "Davi",
+    "lastName": "Russo",
+    "address": "Rua Teste",
+    "number": "999",
+    "zipcode": "99999999",
+    "phoneNumber": "11999999999",
+    "email": "admin@admin.com"
   }
 }
