@@ -27,6 +27,7 @@ When('avanço para a tela de Checkout, insiro os dados de entrega, seleciono a f
 })
 
 Then('o pedido deve ser finalizado', function () {
+    checkoutPage.acceptTerms()
     checkoutPage.finalizePayment()
 })
 
